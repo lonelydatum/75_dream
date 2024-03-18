@@ -34,6 +34,15 @@ function init(){
 
 
 let data_ = {}
+const ease = "power2.out"
+
+function pan(tl, a, b, delay){
+	console.log(a, b);
+	tl.set(b, {opacity:1})
+	tl.add(a, delay)
+	tl.to(a, {duration:1, x:-300, ease:"power4.out"}, a)
+	tl.from(b, {duration:1, x:300, ease:"power4.out"}, a)
+}
 
 
 function start(data){
@@ -42,36 +51,34 @@ function start(data){
 	
 	const tl = init()
 	const TIME = 2
-	const F1_Y = 80
+	const F1_Y = -250
+	
 	tl.add("lax-1")
-	tl.to(".f1-bg_1", {duration:TIME*1.2, y:0, ease:"back-in-out"}, "lax-1")
-	tl.from(".f1-balloon-1", {y:F1_Y, duration:TIME*.7, ease:"back.out"}, "lax-1")
-	tl.from(".f1-balloon-2", {y:F1_Y, duration:TIME*.9,  ease:"back.out"}, "lax-1")
-	tl.from(".f1-balloon-3", {y:F1_Y, duration:TIME*1,  ease:"back.out"}, "lax-1")
-	tl.from(".f1-txt", {y:F1_Y, duration:TIME*1.2,  ease:"back.out"}, "lax-1")
-	tl.from(".f1-max", {y:F1_Y, duration:TIME*1.3,  ease:"back.out"}, "lax-1")
+	tl.to(".f1-bg_1", {duration:TIME*1.2, y:0}, "lax-1")
+	tl.from(".f1-balloon-1", {y:F1_Y, duration:TIME*.8, ease:ease}, "lax-1")
+	tl.from(".f1-balloon-2", {y:F1_Y, duration:TIME*.9,  ease:ease}, "lax-1")
+	tl.from(".f1-balloon-3", {y:F1_Y, duration:TIME*1,  ease:ease}, "lax-1")
+	tl.from(".f1-txt", {y:F1_Y, duration:TIME*1.1,  ease:"back.out"}, "lax-1")
+	tl.from(".f1-max", {y:F1_Y, duration:TIME*1.2,  ease:ease}, "lax-1")
 
-	tl.set(".frame2", {opacity:1})
-	tl.add("f2", "+=.5")
-	tl.to(".frame1", {duration:1, y:-250}, "f2")
-	tl.from(".frame2", {duration:1, y:250}, "f2")
+	pan(tl, ".frame1", '.frame2', "+=.5")
+	
+
 	tl.from(".f2-txta", {duration:.3, x:-100, y:"+=20", opacity:0, ease:"back.out"})
 	tl.from(".f2-txtb", {duration:.3, x:-100, y:"+=20", opacity:0, ease:"back.out"})
 	
 
-	tl.set(".frame3", {opacity:1})
-	tl.add("f3", "+=2")
-	tl.to(".frame2", {duration:1, y:-250}, "f3")
-	tl.from(".frame3", {duration:1, y:250}, "f3")
+	pan(tl, ".frame2", '.frame3', "+=2")
+
 	tl.from(".f3-txt", {duration:.3, y:"+=20", x:-100, opacity:0, ease:"back.out"}, "-=.3")
 	
 
-	tl.set(".frame4", {opacity:1})
-	tl.add("f4", "+=2")
-	tl.to(".frame3", {duration:1, y:-250}, "f4")
-	tl.from(".frame4", {duration:1, y:250}, "f4")
+	pan(tl, ".frame3", '.frame4', "+=3.5")
 
-	tl.add(olg())
+	tl.add("end", "+=.3")
+	tl.from(".f4-cta", {duration:.3, opacity:0, ease:"back.out"}, "end")
+
+	tl.add(olg(), "end")
 
 	// tl.play("f2")
 
