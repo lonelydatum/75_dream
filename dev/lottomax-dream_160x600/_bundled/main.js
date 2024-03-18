@@ -67,16 +67,18 @@ function start(data) {
 
 	pan(tl, ".frame2", '.frame3', "+=2");
 
-	tl.from(".f3-txt", { duration: .5, y: "+=20", x: -100, opacity: 0, ease: "back.out" }, "-=.3");
+	tl.from(".f3-txta", { duration: .5, y: "+=20", x: -100, opacity: 0, ease: "back.out" }, "-=.3");
+	tl.from(".f3-txtb", { duration: .5, opacity: 0, ease: "back.out" });
 
-	pan(tl, ".frame3", '.frame4', "+=3.5");
+	pan(tl, ".frame3", '.frame4', "+=2.8");
+
+	tl.from(".f4-o", { duration: .5, scale: 1, opacity: 0, rotate: 20, ease: "back.out" });
 
 	tl.add("end", "+=.3");
 	tl.from(".f4-cta", { duration: .3, opacity: 0, ease: "back.out" }, "end");
-
 	tl.add((0, _proline.olg)(), "end");
 
-	// tl.play("f2")
+	// tl.play(".frame3")
 }
 
 exports.size = size;

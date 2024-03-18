@@ -32,4 +32,9 @@
 	}
 }
 
+.f4-o{
+	@include pos-scale(127, 27, .5);
+	transform-origin: 50% 50%;
+}
+
 // #L-letter, #L-circ, #G-circ, #G-letter {transform: translateX(-1px);}
