@@ -40,8 +40,8 @@ function pan(tl, a, b, delay){
 	console.log(a, b);
 	tl.set(b, {opacity:1})
 	tl.add(a, delay)
-	tl.to(a, {duration:1, x:-300, ease:"power4.out"}, a)
-	tl.from(b, {duration:1, x:300, ease:"power4.out"}, a)
+	tl.to(a, {duration:.7, x:-300, ease:"power4.out"}, a)
+	tl.from(b, {duration:.7, x:300, ease:"power4.out"}, a)
 }
 
 
@@ -70,7 +70,7 @@ function start(data){
 
 	pan(tl, ".frame2", '.frame3', "+=2")
 
-	tl.from(".f3-txt", {duration:.3, y:"+=20", x:-100, opacity:0, ease:"back.out"}, "-=.3")
+	tl.from(".f3-txt", {duration:.5, y:"+=20", x:-100, opacity:0, ease:"back.out"}, "-=.3")
 	
 
 	pan(tl, ".frame3", '.frame4', "+=3.5")
