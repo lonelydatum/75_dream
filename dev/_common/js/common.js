@@ -74,7 +74,7 @@ function start(data){
 	tl.from(".f3-txtb", {duration:.5, opacity:0, ease:"back.out"})
 	
 
-	pan(tl, ".frame3", '.frame4', "+=2.8")
+	pan(tl, ".frame3", '.frame4', "+=2.3")
 
 	tl.from(".f4-o", {duration:.5, scale:0,  rotate:70, ease:"back.out"})
 	
