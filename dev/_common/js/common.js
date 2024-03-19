@@ -76,7 +76,7 @@ function start(data){
 
 	pan(tl, ".frame3", '.frame4', "+=2.8")
 
-	tl.from(".f4-o", {duration:.5, scale:1, opacity:0, rotate:20, ease:"back.out"})
+	tl.from(".f4-o", {duration:.5, scale:0,  rotate:70, ease:"back.out"})
 	
 	tl.add("end", "+=.3")	
 	tl.from(".f4-cta", {duration:.3, opacity:0, ease:"back.out"}, "end")
