@@ -37,7 +37,7 @@ var data_ = {};
 var ease = "power2.out";
 
 function pan(tl, a, b, delay) {
-	console.log(a, b);
+	// console.log(a, b);
 	tl.set(b, { opacity: 1 });
 	tl.add(a, delay);
 	tl.to(a, { duration: .7, x: -w, ease: "power4.out" }, a);
@@ -49,8 +49,9 @@ function start(data) {
 	// const read
 
 	var tl = init();
-
-	var TIME = 2;
+	var TIME_XXX = h / 250;
+	var TIME = Math.min(TIME_XXX * 2, 2.8);
+	console.log(TIME);
 	var F1_Y = -250;
 
 	tl.add("lax-1");
