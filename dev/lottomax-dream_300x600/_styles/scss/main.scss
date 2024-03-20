@@ -26,13 +26,17 @@
 
 
 
-// #GL_logo{
-// 	svg{
-// 		position: absolute;
-// 		width: 283px;
-// 		top: 346px
-// 	}
-// }
 
+.f1-bg_1 {
+	@include pos(0, -600);
+	// @include pos(0, 0);
+	.f1-bg_1b{
+		@include pos-scalexy(0, 1200, .5, -.5);
+	}
+}
 
-// #L-letter, #L-circ, #G-circ, #G-letter {transform: translateX(-1px);}
+.f4-o{
+	@include pos-scale(127, 30, .5);
+	transform-origin: 50% 50%;
+}
+

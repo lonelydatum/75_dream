@@ -40,8 +40,8 @@ function pan(tl, a, b, delay) {
 	console.log(a, b);
 	tl.set(b, { opacity: 1 });
 	tl.add(a, delay);
-	tl.to(a, { duration: .7, x: -300, ease: "power4.out" }, a);
-	tl.from(b, { duration: .7, x: 300, ease: "power4.out" }, a);
+	tl.to(a, { duration: .7, x: -w, ease: "power4.out" }, a);
+	tl.from(b, { duration: .7, x: w, ease: "power4.out" }, a);
 }
 
 function start(data) {
@@ -49,6 +49,7 @@ function start(data) {
 	// const read
 
 	var tl = init();
+
 	var TIME = 2;
 	var F1_Y = -250;
 

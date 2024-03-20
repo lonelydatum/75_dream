@@ -20,9 +20,6 @@
 	@include pos(0, 193);
 }
 
-.frame1, #banner{
-	// overflow: visible;
-}
 
 .f1-bg_1 {
 	@include pos(0, -250);
@@ -37,4 +34,3 @@
 	transform-origin: 50% 50%;
 }
 
-// #L-letter, #L-circ, #G-circ, #G-letter {transform: translateX(-1px);}

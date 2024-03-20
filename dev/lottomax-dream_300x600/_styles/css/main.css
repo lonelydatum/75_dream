@@ -259,4 +259,40 @@ canvas, .text, .frame, .outline, img {
   position: absolute;
 }
 
+.f1-bg_1 {
+  -webkit-transform: translate(0px, -600px);
+  -ms-transform: translate(0px, -600px);
+  transform: translate(0px, -600px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.f1-bg_1 .f1-bg_1b {
+  -webkit-transform: translate(0px, 1200px) scale(0.5, -0.5);
+  -ms-transform: translate(0px, 1200px) scale(0.5, -0.5);
+  transform: translate(0px, 1200px) scale(0.5, -0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.f4-o {
+  -webkit-transform: translate(127px, 30px) scale(0.5, 0.5);
+  -ms-transform: translate(127px, 30px) scale(0.5, 0.5);
+  transform: translate(127px, 30px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
 /*# sourceMappingURL=main.css.map */
