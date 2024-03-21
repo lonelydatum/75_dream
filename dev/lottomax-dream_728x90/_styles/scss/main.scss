@@ -23,17 +23,16 @@
 }
 
 
+.f1-bg_1 {
+	@include pos(0, -90);
+	// @include pos(0, 0);
+	.f1-bg_1b{
+		@include pos-scalexy(0, 180, .5, -.5);
+	}
+}
 
+.f4-o{
+	@include pos-scale(362, -66, .5);
+	transform-origin: 50% 50%;
+}
 
-// #GL_logo{
-// 	svg{
-// 		position: absolute;
-// 		width: 570px;
-// 		height: 370px;
-// 		top: -252px;
-// 		left: 0px;
-// 	}
-// }
-
-
-// #L-letter, #L-circ, #G-circ, #G-letter {transform: translateX(-1px);}

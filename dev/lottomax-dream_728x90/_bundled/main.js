@@ -51,6 +51,7 @@ function start(data) {
 	var tl = init();
 	var TIME_XXX = h / 250;
 	var TIME = Math.min(TIME_XXX * 2, 2.8);
+	TIME = Math.max(TIME, .8);
 	console.log(TIME);
 	var F1_Y = -250;
 

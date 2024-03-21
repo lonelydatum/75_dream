@@ -8,7 +8,7 @@
 
 
 #legalBtn{	
-	@include pos(290, 0);	
+	@include pos(390, 0);	
 	width: 30px;
 	height: 10px;
 	display: none;
@@ -27,15 +27,16 @@
 
 
 
-// #GL_logo{
-// 	svg{
-// 		position: absolute;
-// 		width: 120px;
-// 		height:400px;
-// 		top: -232px;
-// 		left: 0px;
-// 	}
-// }
+.f1-bg_1 {
+	@include pos(0, -50);
+	// @include pos(0, 0);
+	.f1-bg_1b{
+		@include pos-scalexy(0, 100, .5, -.5);
+	}
+}
 
+.f4-o{
+	@include pos-scale(156, -36, .5);
+	transform-origin: 50% 50%;
+}
 
-// #L-letter, #L-circ, #G-circ, #G-letter {transform: translateX(-1px);}

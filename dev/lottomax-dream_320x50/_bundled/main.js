@@ -51,6 +51,7 @@ function start(data) {
 	var tl = init();
 	var TIME_XXX = h / 250;
 	var TIME = Math.min(TIME_XXX * 2, 2.8);
+	TIME = Math.max(TIME, .8);
 	console.log(TIME);
 	var F1_Y = -250;
 
@@ -115,8 +116,10 @@ exports.olg = olg;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-document.getElementById("man").className = "retina man";
 gsap.set("#EF_cta", { x: -160, y: -25, transformOrigin: "320px 50px" });
+document.getElementById("money").className = "shadow f2-txtb retina";
+console.log(document.getElementById("money"));
+// gsap.set("#money", { className:"shadow f2-txtb retina"})
 (0, _commonJsCommonJs.start)({ manScale: false, olgY: 70 });
 
 module.exports = {};
