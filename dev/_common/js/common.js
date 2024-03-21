@@ -37,11 +37,16 @@ let data_ = {}
 const ease = "power2.out"
 
 function pan(tl, a, b, delay){
-	// console.log(a, b);
+	
+	const TIME_XXX = w/300
+	let TIME = Math.min(TIME_XXX*.7, 1.1)
+	// TIME = Math.max(TIME, 1.3)
+
+	
 	tl.set(b, {opacity:1})
 	tl.add(a, delay)
-	tl.to(a, {duration:.7, x:-w, ease:"power4.out"}, a)
-	tl.from(b, {duration:.7, x:w, ease:"power4.out"}, a)
+	tl.to(a, {duration:TIME, x:-w, ease:"power4.out"}, a)
+	tl.from(b, {duration:TIME, x:w, ease:"power4.out"}, a)
 }
 
 
@@ -52,8 +57,8 @@ function start(data){
 	const tl = init()
 	const TIME_XXX = h/250
 	let TIME = Math.min(TIME_XXX*2, 2.8)
-	TIME = Math.max(TIME, .8)
-	console.log(TIME);
+	TIME = Math.max(TIME, 1.3)
+	
 	const F1_Y = -250
 	
 	tl.add("lax-1")
